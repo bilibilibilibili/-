@@ -1,0 +1,179 @@
+/* pages/order/order.wxss */
+
+page {
+  background: #f2f2f2;
+}
+
+
+
+.order-view {
+  border-top: solid 20rpx #f2f2f2;
+  background-color: #fff;
+}
+
+.order-top text:nth-child(2) {
+  color: #e02e24;
+}
+
+
+
+.order-top {
+  width: 100%;
+}
+
+.order-top text {
+  height: 84rpx;
+  display: block;
+  line-height: 84rpx;
+  font-size: 30rpx;
+  color: #666;
+  padding: 0 30rpx;
+  width: 300rpx;
+  float: left;
+}
+
+.order-top text:nth-child(2) {
+  text-align: right;
+  float: right;
+  width: 200rpx;
+  /* padding-right:  */
+}
+
+.order-detail {
+  /* padding: 20rpx 2%; */
+  /* width: 96%; */
+  background: #f2f2f2;
+}
+
+.leftView {
+  padding: 20rpx 30rpx;
+  height: 160rpx;
+  width: 160rpx;
+  /* margin-left: 30rpx;
+  padding: 10rpx; */
+  float: left;
+}
+
+.leftView image {
+  display: block;
+  height: 160rpx;
+  width: 160rpx;
+}
+
+.order-name {
+  padding-top: 20rpx;
+  width: 350rpx;
+  font-size: 28rpx;
+  float: left;
+  color: #333;
+  margin-left: 10rpx;
+}
+
+.order-name text {
+  display: block;
+}
+
+.order-name text:nth-child(1) {
+  height: 80rpx;
+  width: 100%;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.order-name text:nth-child(2) {
+  font-size: 24rpx;
+  color: #999;
+  padding-top: 20rpx;
+}
+.order-price {
+  padding-top: 20rpx;
+  float: right;
+  margin-right: 20rpx;
+  
+  font-size: 29rpx;
+}
+
+.order-price text {
+  display: block;
+  width: 100rpx;
+  text-align: right;
+}
+.order-price text:nth-child(2) {
+  padding-top: 20rpx;
+  color: #999;
+}
+.order-pay {
+  border-bottom: solid 2rpx #f2f2f2;
+  padding-right: 20rpx;
+}
+
+.order-option {
+  height: 96rpx;
+}
+
+.order-option text {
+  display: block;
+  width: 150rpx;
+  float: right;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+  padding: 15rpx 10rpx;
+  margin-top: 18rpx;
+  text-align: center;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 10rpx;
+  border: solid 2rpx #333;
+  color: #000;
+}
+
+.options text:nth-child(1) {
+  border: solid 2rpx #e02e24;
+  background-color: #e02e24;
+  color: #fff;
+}
+
+.order_all_list {
+  padding-top: 75rpx;
+  background-color: #fff;
+}
+
+.order-pay text {
+  text-align: right;
+  font-size: 28rpx;
+  display: block;
+  color: #333;
+  height: 84rpx;
+  line-height: 84rpx;
+}
+/*没有更多  */
+.footerView {
+  background: #eee;
+  color: #666;
+  text-align: center;
+  font-size: 27rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+
+.noData image {
+  height: 130rpx;
+  width: 130rpx;
+}
+.noData text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.noData text:last-child{
+  color: #e02e24;
+
+}

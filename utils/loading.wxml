@@ -1,0 +1,4 @@
+<view id="loading_p" hidden="{{hiddenloading}}" >
+  <image src="https://m.meigo.com/activities/images/mini-programs/loading.gif"></image>
+</view>
+

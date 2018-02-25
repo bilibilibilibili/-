@@ -1,0 +1,27 @@
+<!--pages/order/order.wxml-->
+<view class="headTab clearfix">
+  <span wx:for="{{tabList}}" class="{{activeStatus == item.TypeCode?'showMenu':''}}" data-id="{{item.TypeCode}}" bindtap="orderChange">{{item.TypeText}}</span>
+</view>
+<view class='order_all_list'>
+  <view wx:for="{{activeAry}}" class='order-view clearfix'>
+
+    <view bindtap='orderItemDidClick' data-orderid='{{item.orders[0].orderId}}'>
+      
+      <view class='order-detail clearfix'>
+        <view class='leftView'>
+          <image src='{{item.mainPic}}' class='goodsImg'></image>
+        </view>
+        <view class='order-name clearfix'>
+          <text>{{item.shareTitle}}</text>
+          <text id='active-price'>实付:{{item.price}}</text>
+          <text id='active-remind'>{{item.teamRemind}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="order-option options clearfix" wx:if="{{item.optionAry.length}}">
+      <text wx:for="{{item.optionAry}}" wx:for-item="optionItem" wx:for-index="optionIndex" data-optionid='{{optionItem.optionId}}' bindtap='orderOptionDidClick' data-orderid='{{item.orderId}}' data-optiontext='{{optionItem.optionText}}' data-teamtype='{{item.pintuanType}}' data-teamid='{{item.pintuanId}}' data-goodsimg='{{item.mainPic}}' data-groupid='{{item.groupId}}'>{{optionItem.optionText}}</text>
+    </view>
+  </view>
+</view>
+   <view class='footerView' hidden="{{maxPage != '' && maxPage <= pageNum}}">{{(maxPage != '')?"没有更多了":"正在加载更多"}}</view>   
+<include src="../../utils/loading.wxml" />

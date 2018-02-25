@@ -1,0 +1,121 @@
+@import "../payment/payment.wxss";
+@import "../myOrder/myOrder.wxss";
+/* page {
+  background: #fff
+} */
+.orderdet-top {
+  height: 210rpx;
+  background: #e02e24;
+
+}
+.orderdet-top text {
+  display: block;
+  width: 250rpx;
+  padding-left: 60rpx;
+  line-height: 210rpx;
+  height: 210rpx;
+  font-size: 38rpx;
+  color: white;
+  float: left;
+}
+.orderdet-top image{
+  display: block;
+  /* width: 40%; */
+width: 180rpx;
+  height: 180rpx;
+  margin-top: 15rpx;
+  padding-right: 60rpx;
+
+  /* padding: 40rpx; */
+  float: right;
+  
+}
+/*地址  */
+.addressMessage {
+  height: 120rpx;
+}
+.imageViewA {
+  width: 5%;
+  margin-top: 50rpx;
+  height: 40rpx;
+  float: left;
+  background: #fff url(https://m.meigo.com/activities/images/mini-programs/member/location.png) no-repeat 35% center;
+  background-size: 38rpx;
+}
+.myAddress {
+  /* border-bottom: solid 20rpx #f2f2f2; */
+  background-color: #fff;
+  height: 140rpx;
+}
+ .name text:nth-child(2) {
+  border: none;
+  
+} 
+/*订单信息  */
+.orderDet-Infor {
+  background: #fff;
+}
+.infor-order {
+  width: 100%;
+   font-size: 28rpx;
+/* background: #fff; */
+margin-top: 20rpx;
+/* border-top: solid 20rpx #e02e24 */
+}
+
+.infor-order text {
+  display: block;
+  float: left;
+  width: 300rpx;
+  
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 20rpx;
+}
+.infor-order text:nth-child(2) {
+  border:solid 1px #666;
+  width: 80rpx;
+  float: right;
+  margin-right: 20rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  padding: 10rpx;
+  text-align: center;
+  margin-top: 15rpx;
+}
+
+.pay-view text {
+  display: block;
+  height: 70rpx;
+  padding-left: 20rpx;
+  line-height: 70rpx;
+   font-size: 28rpx; 
+}
+/* .order-detail {
+  padding: 0;
+  width: 100%;
+} */
+.order-view {
+  border-top: none;
+}
+.leftView image {
+  margin: 0
+}
+#order-address,#order-name {
+  font-size: 30rpx;
+  color: #666;
+  padding-top: 15rpx;
+}
+/* .name {
+  font-size: 30rpx;
+  color: #666;
+  width: 100%;
+}
+.myAddress {
+  font-size: 30rpx;
+  color: #666;
+} */
+
+/* .myAddress {
+
+} */

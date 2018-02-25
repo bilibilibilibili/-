@@ -1,0 +1,330 @@
+<!--pages/wxuserShare/wxuserShare.wxml-->
+<!-- <text>pages/wxuserShare/wxuserShare.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml" />
+<!--组团的人  -->
+<view class='roleShareView' wx:if="{{activeStatus==1}}">
+  <view class='shareTopView'>
+    <view class='shareLeftView'>
+      <image src='{{detailDicti.sharePic}}'></image>
+    </view>
+    <view class='shareGoodsDes'>
+      <text class='time'>剩余{{countDownn}}</text>
+      <view class='leftNum'>
+        <text>仅剩</text>
+        <text>{{detailDicti.missingNum}}</text>
+        <text>个名额</text>
+      </view>
+      <view class='price'>
+        <text>￥{{lowPrice}}</text>
+        <text style="text-decoration:line-through;">￥{{upPrice}}</text>
+      </view>
+      <text class='limit'>限时抢购</text>
+    </view>
+  </view>
+  <!--  -->
+  <view class='sharrrr'>
+    <!-- <view class='sharePeople clearfix' style='height={{arrayNum}}' rpx>
+      <view class='shareImgView clearfix' wx:for="{{emptyImagAry}}">
+
+         <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view> -->
+    <view class='sharePeople clearfix {{emptyImagAry.length <6?"shareCenter clearfix":" "}}'>
+      <view class='shareImgView clearfix {{emptyImagAry.length <6?"shareCenterImgView clearfix":" "}}' wx:for="{{emptyImagAry}}">
+
+        <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view>
+
+    </view>
+
+    <button open-type='share' bindtap='shareMyGoods' class='shareOver'> 邀请好友参团 </button>
+    <view class='obtainPac'>
+      <text>分享到三个群,即可获得</text>
+      <text>88</text>
+      <text>元红包</text>
+    </view>
+    <view class='bottomView'></view>
+  </view>
+  <!-- </view> -->
+
+
+  <!--商品信息  -->
+  <view class='haveBuyInform'>
+    <view class="provinceView" bindtap="roleTranslateToGoodsDetail">
+      <text>商品名称</text>
+      <text>{{detailDicti.title}}</text>
+    </view>
+    <view class=" newProductView clearfix" bindtap="fightGroupExplain">
+      <text>拼单须知</text>
+      <text id='newProduct'>好友拼单 | 一等奖发货 | 二等奖退款赠券</text>
+    </view>
+    <view class='fightRule'>
+      <!-- <text class='rule'>抽奖规则</text> -->
+      <view class='ruleView'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </view>
+  </view>
+  <view class='shareCover' hidden="{{!isOut}}">
+    <view class='shareTopView'>
+      <view class='shareLeftView'>
+        <image src='{{detailDicti.sharePic}}'></image>
+      </view>
+      <view class='shareGoodsDes'>
+        <text class='time'>剩余{{countDownn}}</text>
+        <view class='leftNum'>
+          <text>仅剩</text>
+          <text>{{detailDicti.missingNum}}</text>
+          <text>个名额</text>
+        </view>
+        <view class='price'>
+          <text>￥{{lowPrice}}</text>
+          <text style="text-decoration:line-through;">￥{{upPrice}}</text>
+        </view>
+        <text class='limit'>限时抢购</text>
+      </view>
+    </view>
+    <!--  -->
+    <view class='sharrrr'>
+      <!-- <view class='sharePeople clearfix' style='height={{arrayNum}}' rpx>
+        <view class='shareImgView clearfix' wx:for="{{emptyImagAry}}">
+          <image src='{{item.avatar?item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+          <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+        </view> -->
+      <view class='sharePeople clearfix {{emptyImagAry.length <6?"shareCenter clearfix":" "}}'>
+        <view class='shareImgView clearfix {{emptyImagAry.length <6?"shareCenterImgView clearfix":" "}}' wx:for="{{emptyImagAry}}">
+
+          <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+          <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+        </view>
+
+      </view>
+
+      <button open-type='share' bindtap='shareMyGoods' class='shareOver'> 邀请好友参团 </button>
+
+      <view class='obtainPac clearfix'>
+        <!-- <image src='https://m.meigo.com/activities/images/mini-programs/share.png'></image> -->
+        <text>分享到三个群,即可获得</text>
+        <text>88</text>
+        <text>元红包</text>
+      </view>
+      <view class='bottomView'></view>
+    </view>
+  </view>
+</view>
+
+<!--  -->
+<!--  -->
+<!--  立刻拼单-->
+<view class='userShare' wx:if="{{activeStatus== 2}}">
+  <view class='fightNowView clearfix'>
+    <view class='groupView' data-clickid='1'>
+      <view class='leftView'>
+        <image src='{{detailDicti.sharePic}}' class='goodsImg'></image>
+      </view>
+      <view class='groupDesView'>
+
+        <text class='textDes'>{{detailDicti.title}}</text>
+        <view class='listView'>
+          <text class='fightText'>拼团省{{economical}}</text>
+          <text>{{detailDicti.groupNums}}人拼团</text>
+          <text>￥{{lowPrice}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='sharePeople clearfix {{emptyImagAry.length <6?"shareCenter clearfix":" "}}'>
+      <view class='shareImgView clearfix {{emptyImagAry.length <6?"shareCenterImgView clearfix":" "}}' wx:for="{{emptyImagAry}}">
+
+        <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view>
+      <!-- <view class='sharePeople clearfix'> 
+      <view class='shareImgView clearfix' wx:for="{{emptyImagAry}}">
+
+        <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view> -->
+
+    </view>
+    <view class='nowleftNum'>
+      <text>仅剩</text>
+      <text>{{detailDicti.missingNum}}</text>
+      <text>个名额</text>
+      <text>{{countDownn}}结束</text>
+    </view>
+    <view class="saveAddress" bindtap="fightGoodsNowClick">
+      立即拼单</view>
+    <view class="usenewProduct clearfix" bindtap="fightGroupExplain">
+      <text>拼单须知</text>
+      <text id='newProduct'>好友拼单 | 一等奖发货 | 二等奖退款赠券</text>
+    </view>
+
+    <view class='fightRule'>
+      <view class='ruleView'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </view>
+  </view>
+</view>
+<!--  -->
+<!-- 已经完成的拼团(团员,团长) -->
+<view class='haveOver' wx:if="{{activeStatus== 3}}">
+  <view class='fightInfor clearfix'>
+    <view class='overShareTopTitleView'>
+      拼单成功</view>
+    <text class='fightRemid'>多次开团成团提高中奖几率!</text>
+    <!-- <view class='sharePeople clearfix'>
+      <view class='shareImgView clearfix' wx:for="{{ItemList}}">
+        <image src='{{item.id==1?"https://m.meigo.com/activities/images/mini-programs/sharesuccess.png":""}}' class='{{item.id==1?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.id == 1}}">团长</text>
+      </view> -->
+    <view class='sharePeople clearfix {{emptyImagAry.length <6?"shareCenter clearfix":" "}}'>
+      <view class='shareImgView clearfix {{emptyImagAry.length <6?"shareCenterImgView clearfix":" "}}' wx:for="{{emptyImagAry}}">
+
+        <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view>
+
+    </view>
+    <view class="saveAddress" bindtap="fightAgain">
+      再次拼单</view>
+    <view class='haveBuyInform'>
+      <view class="provinceView" bindtap="SuccessTranslateToGoodsDetail">
+        <text>商品名称</text>
+        <text>{{detailDicti.title}}</text>
+      </view>
+      <view class=" overnewProductView clearfix" bindtap="fightGroupExplain">
+        <text>拼单成功时间</text>
+        <text id='newProduct'>{{activeEnd}}</text>
+      </view>
+    </view>
+  </view>
+  <!--抽奖规则  -->
+  <view class='fightRule'>
+    <view class='ruleView'>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+</view>
+
+<!--wx:if="{{activeStatus == 4}}"  -->
+<view class='failView' wx:if="{{activeStatus==4}}">
+  <view class='fightNowView clearfix'>
+    <view class='groupView' data-clickid='1'>
+      <view class='leftView'>
+        <image src='{{detailDicti.sharePic}}' class='goodsImg'></image>
+      </view>
+      <view class='groupDesView'>
+
+        <text class='textDes'>{{detailDicti.title}}</text>
+        <view class='listView'>
+          <text class='fightText'>拼团省{{economical}}</text>
+          <text>{{detailDicti.groupNums}}人拼团</text>
+          <text>￥{{lowPrice}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='sharePeople clearfix' style='height={{arrayNum}}' rpx>
+      <view class='shareImgView clearfix' wx:for="{{emptyImagAry}}">
+         <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view> -->
+    <view class='sharePeople clearfix {{emptyImagAry.length <6?"shareCenter clearfix":" "}}'>
+      <view class='shareImgView clearfix {{emptyImagAry.length <6?"shareCenterImgView clearfix":" "}}' wx:for="{{emptyImagAry}}">
+
+        <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view>
+
+
+    </view>
+    <view class='failFinght'>
+      拼团不成功,款项将原路返回
+    </view>
+    <view class="saveAddress" bindtap="fightNowClick">
+      0.01元抢好货</view>
+    <view class="usenewProduct clearfix" bindtap="fightGroupExplain">
+      <text>拼单须知</text>
+      <text id='newProduct'>好友拼单 | 一等奖发货 | 二等奖退款赠券</text>
+    </view>
+
+    <view class='fightRule'>
+      <view class='ruleView'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </view>
+  </view>
+</view>
+<!--组团成功,非团员  -->
+<view class='haveFightOver' wx:if="{{activeStatus== 5}}">
+  <view class='fightNowView clearfix'>
+    <view class='groupView' data-clickid='1'>
+      <view class='leftView'>
+        <image src='{{detailDicti.sharePic}}' class='goodsImg'></image>
+      </view>
+      <view class='groupDesView'>
+
+        <text class='textDes'>{{detailDicti.title}}</text>
+        <view class='listView'>
+          <text class='fightText'>拼团省{{economical}}</text>
+          <text>{{detailDicti.groupNums}}人拼团</text>
+          <text>￥{{lowPrice}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='sharePeople clearfix' style='height={{arrayNum}}' rpx>
+      <view class='shareImgView clearfix' wx:for="{{emptyImagAry}}">
+         <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view> -->
+    <view class='sharePeople clearfix {{emptyImagAry.length <6?"shareCenter clearfix":" "}}'>
+      <view class='shareImgView clearfix {{emptyImagAry.length <6?"shareCenterImgView clearfix":" "}}' wx:for="{{emptyImagAry}}">
+
+        <image src='{{item.avatar? item.avatar:"https://m.meigo.com/activities/images/mini-programs/question.jpg"}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open==1}}">团长</text>
+      </view>
+
+
+    </view>
+    <view class='failFinght'>
+      该团已结束,请自行开团或者加入其它团!
+    </view>
+    <view class="saveAddress" bindtap="fightNowClick">
+      0.01元抢好货</view>
+    <view class="usenewProduct clearfix" bindtap="fightGroupExplain">
+      <text>拼单须知</text>
+      <text id='newProduct'>好友拼单 | 一等奖发货 | 二等奖退款赠券</text>
+    </view>
+
+    <view class='fightRule'>
+      <view class='ruleView'>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='showFightExplai' wx:if="{{showExplain}}">
+  <text class="close" catchtap="closePopup"></text>
+  <span>如何参加拼团</span>
+  <text>开团或者参加别人的团</text>
+  <text>在规定的事件内,邀请好友参团</text>
+  <text>未达到拼团人数,待款将自动原路返回</text>
+  <view id='haveknow' bindtap='closePopup'>知道了</view>
+</view>
+<!--展示登录弹框  -->
+<view class="loginView" wx:if="{{showLogin}}">
+  <text class='loginExplain'>为了保障账号安全,请绑定手机号</text>
+  <!-- <input type='number' class='myPhone'></input> -->
+  <view class='phone '>
+    <input placeholder='请输入手机号' placeholder-style="color:#999" type="number" data-id='1' bindinput="listenContentChange" maxlength='11' value='{{phone}}' focus='true'></input>
+  </view>
+  <view class='code '>
+    <input placeholder='请输入短信验证码' placeholder-style="color:#999" type="number" data-id='2' bindinput="listenContentChange" value='{{code}}'></input>
+    <text class="{{issend==true?'sending':''}}" bindtap="sendCode">{{sendOrder}}</text>
+  </view>
+  <text class='confrime' bindtap='loginConfrimDidClick'>确定</text>
+</view>
+<view id="fixedBg" catchtap="closePopup" wx:if="{{showBg}}"></view>

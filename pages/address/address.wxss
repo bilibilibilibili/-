@@ -1,0 +1,141 @@
+/* pages/address/address.wxss */
+
+page {
+  background: #efefef;
+  width: 100%;
+  padding-bottom: 150rpx;
+}
+
+.addressTable {
+  background-color: #eee;
+}
+
+.addAddressView {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 35rpx;
+  
+  background: #e02e24
+}
+
+.addAddressView button {
+  color: white;
+  width: 100%;
+ 
+}
+
+.addreccCell {
+  background-color: white;
+  /* display: flex; *//* flex-direction: row; */
+  margin-top: 20rpx;
+}
+
+.name {
+  width: 100%;
+}
+
+.name text:first-child {
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 20rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.name text:last-child {
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  float: right;
+}
+
+.address {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+}
+
+.addressDetail {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #999;
+display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+}
+
+.editAddress {
+  background-color: white;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  padding-top: 10rpx;
+  border-top: solid 1px #eee;
+}
+
+.editAddress button.poa {
+  font-size: 25rpx;
+  margin-left: 20rpx;
+  float: left;
+  text-align: center;
+  text-indent: 10rpx;
+  background: white url(https://m.meigo.com/activities/images/mini-programs/notselect.png) no-repeat left center;
+  background-size: 30rpx;
+  color: #666;
+}
+
+.editAddress button.edit {
+  font-size: 25rpx;
+  background-color: white;
+  margin-right: 20;
+  float: right;
+  background: white url(https://m.meigo.com/activities/images/mini-programs/edit.jpg) no-repeat left center;
+  background-size: 30rpx;
+  padding-left: 40rpx;
+  color: #666;
+}
+
+.editAddress button.poa.checked {
+  background-image: url(https://m.meigo.com/activities/images/mini-programs/selected.png);
+  color: #666;
+}
+
+.editAddress button.delete {
+  font-size: 25rpx;
+  background-color: white;
+  float: right;
+  margin-right: 20;
+  background: white url(https://m.meigo.com/activities/images/mini-programs/delecttt.jpg) no-repeat left center;
+  background-size: 30rpx;
+  padding-left: 40rpx;
+  color: #666;
+}
+
+.editAddress button.addressBtn {
+  background-color: white;
+}
+
+button::after {
+  border: 0;
+}
+.name text:last-child {
+  display: block;
+  padding: 7rpx 10rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  border-radius: 30rpx;
+  border: solid 1px #e02e24;
+  color: #e02e24;
+  font-size: 23rpx
+}

@@ -1,0 +1,43 @@
+ <view class='goods'> 
+  <view class="goodsInfor clear">
+    <view class='leftView'>
+      <image src='{{goodsImg}}'></image>
+    </view>
+    <view class='goodsDetail'>
+      <view class='goodsName'>{{goodsName}}</view>
+      <text class='num'>{{goodsNum}}人团购</text>
+      <text class='price'>￥{{goodsPrice}}</text>
+    </view>
+  </view>
+ </view> 
+<view class='winnerView clearfix'>
+  <view class='topView clearfix'>
+    <text>用户昵称</text>
+    <text>订单号</text>
+    <text>参团时间</text>
+  </view>
+  <block wx:for="{{haveWinAry}}">
+    <view class='winnerDes clearfix'>
+      <text>{{item.nickname}}</text>
+      <text>{{item.join_id}}</text>
+      <text>{{item.haveWinTime}}</text>
+    </view>
+  </block>
+</view>
+<!-- <view class='commendView clear'>
+    <view class='myLikeTop'>猜你喜欢</view>
+    <view class='guessLickCell' bindtap='guessLikeCellDidCkick' wx:for="{{guessLikeList}}" wx:key="guessLikeList">
+      <image src='{{item.data.goodsPic}}'></image>
+      <view class='likeInforView'>
+        <text class='guessgoodsName'>{{item.data.pintuanName}}</text>
+        <view class='likePrice'>
+          <text>￥{{item.data.lowPrice}}</text>
+          <text>已拼{{item.data.salesNum}}件</text>
+        </view>
+      </view>
+
+    </view>
+  </view> -->
+<!--猜你喜欢  -->
+ <import src="../haveWin/guessLike" />
+<!-- <template is="guesslike" data="{{guessLikeList}}" ></template>  -->

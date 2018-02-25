@@ -1,0 +1,21 @@
+<template name="guesslike">
+  <view class='commendView clearfix'>
+  <view class='likeTop'>
+    <view class='myLikeTop'>猜你喜欢</view>
+    </view>
+    <view class='guessLickCell' bindtap='guessLikeCellDidCkick' wx:for="{{guessLikeList}}" wx:key="guessLikeList" data-item='{{item}}'>
+      <image src='{{item.data.goodsPic}}'></image>
+      <view class='likeInforView'>
+        <text class='guessgoodsName'>{{item.data.pintuanName}}</text>
+        <view class='likePrice'>
+          <text>￥{{item.data.lowPrice}}</text>
+          <text>已拼{{item.data.salesNum}}件</text>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+  <!-- <view class='footerView'>没有更多了</view> -->
+  <!-- guessLikeList -->
+</template>

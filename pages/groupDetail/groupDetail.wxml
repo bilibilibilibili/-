@@ -1,0 +1,51 @@
+<!--pages/groupDetail/groupDetail.wxml-->
+<view class='main-container wrap'>
+  <view class='head-container mg-flex mg-flex-a'>
+    <view>
+      <image class='goods-image' src='{{state.goods.mainPic}}'>
+      </image>
+    </view>
+
+    <view class='right-view mg-flex mg-flex-c' >
+      <view class='tag-container mg-flex mg-flex-c mg-flex-a-center' style='position:relative'>
+        <text class='mg-text-1'>限时立省</text>
+        <text class='mg-text-2' style="text-decoration:line-through">￥{{state.singlePrice}}</text>
+        <text class='mg-text-3'>￥{{state.goods.products[0].minUnitPrice}}</text>
+      </view>
+
+      <view class='user-head-container mg-flex mg-flex-a'>
+         <image class='user-head-image' src='{{state.joinPersons[0].avatar}}'></image>
+         <text class='tag-text mg-flex mg-flex-a-center mg-flex-j-center'>团长</text>
+         <image class='user-head-image user-head-image2' src="{{image2}}"></image>
+      </view>
+        <text  class='mg-tag-button mg-flex mg-flex-a-center mg-flex-j-center'>点击抢购</text>
+    </view>
+  </view>  
+  <image mode='aspectFill' class='bolang-image' src="https://m.meigo.com/activities/images/mini-programs/detail/bolang.png"></image>
+
+  <view class='middle-container mg-flex mg-flex-c '>
+    <view class='cell-1 mg-flex mg-flex-c mg-bottom-line'>
+      <view class='share-friend mg-flex mg-flex-j-center mg-flex-a-center' >
+        邀请好友参团 23：32：32后结束
+      </view>
+       <view class='mg-flex mg-flex-j-center mg-flex-a-center message-text'>分享到3个群后，成团率高达98%</view> 
+    </view>
+
+    <view class='cell-2 mg-flex mg-flex-a mg-flex-a-center mg-bottom-line '>
+      <text class='mg-flex mg-flex-1 mg-flex-a-center'>商品详情</text>
+      <text class='mg-flex-2 mg-flex-j-end mg-flex-a-center ' style="overflow: hidden;white-space: nowrap;width:100%; text-overflow:ellipsis">{{state.pintuanName}}</text>
+      <image class='row-icon' src='https://m.meigo.com/activities/images/mini-programs/arrow/bar_arow.png'></image>
+    </view>
+    <view class='cell-2 mg-flex mg-flex-a mg-flex-a-center mg-bottom-line '>
+      <text class='mg-flex mg-flex-1 mg-flex-a-center'>参团时间</text>
+      <text class='mg-flex mg-flex-2 mg-flex-j-end mg-flex-a-center'>{{timeStart}}</text>
+    </view>
+    <view class='cell-2 mg-flex mg-flex-a mg-flex-a-center mg-bottom-line '>
+      <text class='mg-flex mg-flex-1 mg-flex-a-center'>拼单须知</text>
+      <text class='mg-flex mg-flex-2 mg-flex-j-end mg-flex-a-center' style='color:#999'>好友拼单 | 人满发货 | 人不满退款</text>
+    </view>
+
+
+  </view>
+
+</view>

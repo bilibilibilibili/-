@@ -1,0 +1,28 @@
+<!--pages/address/address.wxml-->
+<!-- <text>pages/address/address.wxml</text> -->
+<view class="addressTable clearfix" wx:for="{{addressList}}">
+  <view class="addreccCell clearfix" data-id="{{item.AddressId}}" data-index="{{index}}">
+
+    <!-- <view class="addressMessage clearfix" bindtap="{{isSelectCell != '0'? 'selectedCell' : ''}}" data-id="{{item.AddressId}}" data-index="{{index}}"> -->
+     <view class="addressMessage clearfix" bindtap="selectedCell" data-id="{{item.consigneeId}}" data-index="{{index}}">
+      <view class="name clearfix">
+        <text>姓名:{{item.consigneeName}}</text>
+        <text>{{item.addrType == 1?"家庭":"公司"}}</text>
+      </view>
+      <view class="address">联系电话:{{item.consigneeTel}}</view>
+      <view class="addressDetail">送达地址{{item.province.regionName}}{{item.city.regionName}}{{item.district.regionName}}{{item.address}}</view>
+    </view>
+
+    <view class="editAddress clearfix">
+      <button bindtap="defaultAddress" data-index="{{index}}" data-id="{{item.consigneeId}}" hover-class="addressBtn" class="{{item.isDefault == 1 ? 'poa checked' : 'poa'}}">默认地址</button>
+      <button bindtap="deleteAddress" hidden="{{isSubmit}}" data-index="{{index}}" data-id="{{item.consigneeId}}" class="delete">删除</button>
+      <button bindtap="editAddress" hidden="{{isSubmit}}" data-index="{{index}}" data-id="{{item.consigneeId}}" class="edit">编辑</button>
+    </view>
+  </view>
+</view>
+<view class="addAddressView" bindtap='addAddress' hidden='{{isSubmit}}'>
+  <!-- <button bindtap="addAddress" hidden="{{isSelectCell}}">添加收货地址</button> -->
+  添加收货地址</view>
+<!-- <view class="noData" hidden="{{nodata}}" >暂无收货地址</view> -->
+
+<include src="../../utils/loading.wxml" />

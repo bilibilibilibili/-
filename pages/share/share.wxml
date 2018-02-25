@@ -1,0 +1,114 @@
+<!--pages/share/share.wxml-->
+<!-- <text>pages/share/share.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='shareTopView'>
+  <view class='shareLeftView'>
+    <image src='{{detailDicti.sharePic}}'></image>
+  </view>
+  <view class='shareGoodsDes'>
+    <text class='time'>剩余{{countDownn}}</text>
+    <view class='leftNum'>
+      <text>仅剩</text>
+      <text>{{detailDicti.missingNum}}</text>
+      <text>个名额</text>
+    </view>
+    <view class='price'>
+      <text>￥{{lowPrice}}</text>
+      <text style="text-decoration:line-through;">￥{{upPrice}}</text>
+    </view>
+    <text class='limit'>限时抢购</text>
+  </view>
+</view>
+<!--  -->
+<view class='sharrrr'>
+  <view class='sharePeople clearfix' style='height={{arrayNum}}' rpx>
+    <view class='shareImgView clearfix' wx:for="{{emptyImagAry}}">
+      <!-- <image src='{{item.id==1?"https://m.meigo.com/activities/images/mini-programs/home.jpg":""}}' class='{{item.id==1?"":"imageBorder"}}'></image> -->
+      <image src='{{item.avatar?"item.avatar":""}}' class='{{item.iavatard?"":"imageBorder"}}'></image>
+      <text class='idifity' wx:if="{{item.id == 1}}">团长</text>
+    </view>
+
+  </view>
+
+  <button open-type='share' bindtap='shareMyGoods' class='shareOver'> 邀请好友参团结束 </button>
+  <view class='obtainPac'>
+    <text>分享到三个群,即可获得</text>
+    <text>88</text>
+    <text>元红包</text>
+  </view>
+  <view class='bottomView'></view>
+</view>
+<!-- </view> -->
+
+
+<!--商品信息  -->
+<view class='haveBuyInform'>
+  <view class="provinceView" bindtap="translateToGoodsDetail">
+    <text>商品名称</text>
+    <text>{{detailDicti.title}}</text>
+  </view>
+  <view class=" newProductView clearfix" bindtap="fightGroupExplain">
+    <text>拼单须知</text>
+    <text id='newProduct'>好友拼单 | 一等奖发货 | 二等奖退款赠券</text>
+  </view>
+</view>
+
+
+<!--拼单须知  -->
+<view class='showFightExplai' wx:if="{{showExplain}}">
+  <text class="close" catchtap="closePopup"></text>
+  <span>如何参加拼团</span>
+  <text>开团或者参加别人的团</text>
+  <text>在规定的事件内,邀请好友参团</text>
+  <text>未达到拼团人数,待款将自动原路返回</text>
+  <view id='haveknow' bindtap='closePopup'>知道了</view>
+</view>
+
+<!--抽奖规则  -->
+<view class='fightRule'>
+  <!-- <text class='rule'>抽奖规则</text> -->
+  <view class='ruleView'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+<view id="fixedBg" catchtap="closePopup" wx:if="{{showBg}}"></view>
+<view class='shareCover' hidden="{{!isOut}}">
+  <view class='shareTopView'>
+    <view class='shareLeftView'>
+      <image src='{{detailDicti.sharePic}}'></image>
+    </view>
+    <view class='shareGoodsDes'>
+      <text class='time'>剩余{{countDownn}}</text>
+      <view class='leftNum'>
+        <text>仅剩</text>
+        <text>{{detailDicti.missingNum}}</text>
+        <text>个名额</text>
+      </view>
+      <view class='price'>
+        <text>￥{{lowPrice}}</text>
+        <text style="text-decoration:line-through;">￥{{upPrice}}</text>
+      </view>
+      <text class='limit'>限时抢购</text>
+    </view>
+  </view>
+  <!--  -->
+  <view class='sharrrr'>
+    <view class='sharePeople clearfix' style='height={{arrayNum}}' rpx>
+      <view class='shareImgView clearfix' wx:for="{{emptyImagAry}}">
+        <image src='{{item.avatar?item.avatar:""}}' class='{{item.avatar?"":"imageBorder"}}'></image>
+        <text class='idifity' wx:if="{{item.is_open == true}}">团长</text>
+      </view>
+
+    </view>
+
+    <button open-type='share' bindtap='shareMyGoods' class='shareOver'> 邀请好友参团结束 </button>
+
+    <view class='obtainPac clearfix'>
+      <!-- <image src='https://m.meigo.com/activities/images/mini-programs/share.png'></image> -->
+      <text>分享到三个群,即可获得</text>
+      <text>88</text>
+      <text>元红包</text>
+    </view>
+    <view class='bottomView'></view>
+  </view>
+</view>

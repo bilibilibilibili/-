@@ -1,0 +1,43 @@
+<!--pages/order/order.wxml-->
+<view class="headTab">
+  <span wx:for="{{tabList}}" class="{{showId == item.TypeCode?'showMenu':''}}" data-id="{{item.TypeCode}}" bindtap="orderChange">{{item.TypeText}}</span>
+</view>
+<view class='order_all_list'>
+  <view wx:for="{{orderList}}" class='order-view clearfix'>
+
+    <view bindtap='orderItemDidClick' data-orderid='{{item.orders[0].orderId}}' data-activeorder='{{item.orders[0].isActivityOrder}}'>
+      <view class='order-top clearfix'>
+        <text>订单编号:{{item.orders[0].orderId}}</text>
+        <text>{{item.orders[0].statusStr}}</text>
+      </view>
+      <view class='order-detail clearfix'>
+        <view class='leftView'>
+          <image src='{{item.orders[0].goods[0].thumbnailPic}}' class='goodsImg'></image>
+        </view>
+        <view class='order-name clearfix'>
+          <text>{{item.orders[0].goods[0].name}}</text>
+          <text>{{item.orders[0].goods[0].spec}}</text>
+        </view>
+        <view class='order-price clearfix'>
+          <text>￥{{item.orders[0].goods[0].singleP}}</text>
+          <text>X{{item.orders[0].goods[0].quantity}}</text>
+        </view>
+      </view>
+      <view class='order-pay'>
+        <text>实付:￥{{item.orders[0].toPrice}}(免运费)</text>
+      </view>
+    </view>
+
+
+    <view class='{{item.orders[0].optionAry.length == 1?"order-option clearfix" :"order-option options clearfix"}}' wx:if="{{item.orders[0].optionAry.length}}">
+      <text wx:for="{{item.orders[0].optionAry}}" wx:for-item="optionItem" wx:for-index="optionIndex" data-optionid='{{optionItem.optionId}}' bindtap='orderOptionDidClick' data-orderid='{{item.orders[0].orderId}}' data-optiontext='{{optionItem.optionText}}'>{{optionItem.optionText}}</text>
+    </view>
+  </view>
+</view>
+ <view class='footerView' hidden="{{maxPage != '' && maxPage <= pageNum}}">{{(maxPage != '')?"没有更多了":"正在加载更多"}}</view>  
+ <view class="noData" hidden="{{nodata}}">
+ <image src="https://m.meigo.com/activities/images/mini-programs/order/noorder.png"></image>
+ <text>您还没有相关订单</text>
+ <text bindtap='goBuyingDidClick'>去逛逛</text>
+ </view> 
+<include src="../../utils/loading.wxml" />

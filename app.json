@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/special/special",
+    "pages/fightGroup/fightGroup",
+    "pages/logistics/logistics",
+    "pages/myOrder/myOrder",
+    "pages/activeOrder/activeOrder",
+    "pages/wxuserShare/wxuserShare",
+    "pages/order/order",
+    "pages/payment/payment",
+    "pages/address/address",
+    "pages/address/editAddress/editAddress",
+    "pages/goodsDetail/goodsDetail",
+    "pages/haveWin/haveWin",
+    "pages/share/share",
+    "pages/orderDetail/orderDetail",
+    "pages/myCenter/myCenter",
+    "pages/groupDetail/groupDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "美购Meigo",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#e24242",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/special/special",
+        "iconPath": "images/tab_temai1.png",
+        "selectedIconPath": "images/tab_temai2.png",
+        "text": "9.9特卖"
+      },
+      {
+        "pagePath": "pages/fightGroup/fightGroup",
+        "iconPath": "images/tab_choujiang1.png",
+        "selectedIconPath": "images/tab_choujiang2.png",
+        "text": "1分抽奖"
+      },
+      {
+        "pagePath": "pages/myCenter/myCenter",
+        "iconPath": "images/tab_me1.png",
+        "selectedIconPath": "images/tab_me2.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

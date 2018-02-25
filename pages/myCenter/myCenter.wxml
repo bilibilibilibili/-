@@ -1,0 +1,56 @@
+<!--pages/myCenter/myCenter.wxml-->
+<!-- @import "../../template.wxss"; -->
+
+<import src='../../template/loading.wxml'/>
+<!-- <template is='loading' /> -->
+ <view class='main-container wrap'>
+    <view class='head mg-flex mg-flex-c mg-flex-a-center'>
+      <view class='header-view mg-flex mg-flex-j-center mg-flex-a-center'>
+          <image src='{{userInfo.avatarUrl}}' class='user-image'></image>
+      </view>
+      <view class='mg-flex mg-flex-a-center user-name'>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class='my-order mg-content mg-flex  mg-flex-a mg-flex-a-center' bindtap='myOrder'>
+      <view class='mg-flex mg-flex-1'>
+        <text class='large-text'>我的订单</text>
+      </view>
+      <view class='mg-flex mg-flex-1 mg-flex-j-end mg-flex-a-center'>
+          <text class='large-text red-text'>全部订单</text>
+          <image class='right-icon' src='https://m.meigo.com/activities/images/mini-programs/arrow/redarow.png'>          </image>
+      </view>
+    </view>
+
+    <view class='status-container mg-flex mg-flex-a '>
+      <block wx:for='{{statusText}}' wx:key='{{index}}'>
+        <view class='mg-flex-1 mg-flex-c' data-text='{{statusText[index]}}' bindtap='orderStatus'>
+          <view class='mg-flex mg-flex-j-center'>
+            <image class="status-icon {{status[index] == 0?'':'left'}}"  src='{{statusImage[index]}}'>
+            </image>
+            <text  class="status-count mg-flex mg-flex-j-center mg-flex-a-center {{status[index] == 0? 'hide':''}} {{status[index] > 99 ? 'status-count-padding':''}}">{{status[index] == 0?'':status[index]}}</text>
+          </view>
+          <view class='mg-flex mg-flex-j-center'>
+            <text style='position:inherit'  class='status-text'>{{item}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+
+     <block wx:for='{{cellIcon}}' wx:key='{{index}}'> 
+      <view class="mg-flex mg-content cell {{index == 0? 'mg-m-t-20' : 'mg-m-t-1'}}" bindtap='pushTo' >
+        <view class='mg-flex mg-felx-1 mg-flex-a-center'>
+          <image class='cell-icon' src='{{item}}'></image>
+          <text class='cell-text'>{{cellText[index]}}</text>
+        </view>
+        <view class='mg-flex mg-flex-1 mg-flex-j-end mg-flex-a-center'>
+          <image class='cell-icon' src='https://m.meigo.com/activities/images/mini-programs/arrow/bar_arow.png'></image>
+        </view>
+      </view>
+     </block> 
+    
+
+   
+
+  
+ </view> 

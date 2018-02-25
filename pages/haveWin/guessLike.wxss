@@ -1,0 +1,72 @@
+.myLikeTop {
+  width: 70%;
+    margin-left: 15%;
+background: #eee url(https://m.meigo.com/activities/images/mini-programs/member/like.png) no-repeat 30% center;
+                      background-size: 50rpx;
+                      text-align: center;
+                      border-top: solid 30rpx #eee;
+                      color: #e02e24;
+                      font-size: 32rpx;
+                      font-weight: bold;
+                      border-bottom: solid 20rpx #eee;
+}
+.likeTop {
+background: #eee;
+}
+.guessLickCell {
+   border: solid 1rpx #eee; 
+  width: 48%;
+  margin:10rpx 0.5%;
+  float: left;
+  height: 520rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.guessLickCell image {
+  display: block;
+  width: 100%;
+  height: 350rpx;
+}
+.guessgoodsName {
+  padding: 20rpx 0 10rpx 0;
+    height: 65rpx; 
+   display: -webkit-box;
+   word-break: break-all;
+    text-overflow: ellipsis;
+    font-size: 28rpx;
+    color: #666;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+.likeInforView {
+  padding: 0 4%;
+}
+.likePrice {
+  height: 60rpx;
+}
+.likePrice text {
+  display: block;
+ width:50%;
+ float: left;
+ padding-top: 25rpx;
+ 
+}
+.likePrice text:first-child {
+color: red;
+font-weight:bold
+}
+.likeInforView text:last-child {
+  text-align: right;
+  color: #666;
+  font-size: 27rpx;
+}
+.footerView {
+  
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 35rpx;
+   background: #eee;
+   width: 100%;
+}

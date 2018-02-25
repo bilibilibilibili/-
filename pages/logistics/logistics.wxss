@@ -1,0 +1,72 @@
+.logistics-top {
+  height: 200rpx;
+  border-bottom: solid 20rpx #f2f2f2;
+}
+.leftView {
+  padding: 20rpx 30rpx;
+  height: 160rpx;
+  width: 160rpx;
+  float: left;
+}
+.leftView image {
+  display: block;
+  height: 160rpx;
+  width: 160rpx;
+  border: solid 1rpx #f2f2f2
+}
+.logis-inform {
+  float: left;
+  padding: 20rpx
+}
+.logis-inform text {
+  display: block;
+  padding-top: 10rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+.itemlist {
+  height: 100rpx;
+}
+.logis-inform text:first-child {
+  color: #333;
+  font-size: 32rpx;
+}
+.itemlist {
+  padding: 20rpx;
+
+}
+.itemlist text{
+display: block;
+float: left;
+height: 150rpx;
+/* line-height: 100rpx; */
+width: 70%;
+font-size: 26rpx;
+}
+.itemlist text:first-child {
+width: 20%;
+padding-right: 20rpx;
+border-right: solid 1rpx #f2f2f2;
+
+}
+.itemlist text:last-child {
+  padding-left: 30rpx;
+}
+.itemlist image {
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  margin-left: 19%;
+  margin-top: 30rpx;
+}
+.logistics-list {
+  margin-top: 30rpx;
+}
+.logistics-list:last-child text:first-child {
+  border-right: none;
+}
+
+.list-view :first-child .itemlist image {
+   margin-top: 0;
+}

@@ -1,0 +1,172 @@
+@import "../address/address.wxss";
+@import "../share/share.wxss";
+@import "../goodsDetail/goodsDetail.wxss";
+
+page {
+  background: #fff;
+}
+
+.imageViewA {
+  width: 5%;
+  margin-top: 80rpx;
+  height: 40rpx;
+  /* background: red; */
+  float: left;
+  background: #fff url(https://m.meigo.com/activities/images/mini-programs/arrow.png) no-repeat 35% center;
+  background-size: 18rpx;
+}
+
+.imageViewL {
+  background: #fff url(https://m.meigo.com/activities/images/mini-programs/location.png) no-repeat 35% center;
+  background-size: 38rpx;
+  padding-left: 40rpx;
+}
+
+.addressMessage {
+  float: left;
+  width: 80%;
+  height: 200rpx;
+}
+
+.goodsInform {
+  border-top: solid 20rpx #f2f2f2;
+  margin-top: 10rpx;
+  height: 160rpx;
+  border-bottom: solid 1px #eee;
+}
+
+.myAddress, .noAddressView {
+  /* border-bottom: solid 1px #e7e7e7; */
+}
+
+.noAddressView {
+  height: 160rpx;
+}
+
+.noAddressView text {
+  height: 158rpx;
+  line-height: 158rpx;
+  text-align: center;
+  color: #e02e24;
+  display: block;
+  width: 100%;
+}
+
+.leftView {
+  width: 20%;
+  float: left;
+}
+
+.leftView image {
+  display: block;
+  margin: 10rpx 5%;
+  width: 90%;
+  height: 140rpx;
+}
+
+.goodsView {
+  width: 64%;
+  float: left;
+}
+
+.nameTe, .price {
+  /* display: block; */
+  width: 95%;
+  padding: 10rpx 0 2rpx 0;
+  color: #666;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 26rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+#payprice {
+  display: block;
+  width: 95%;
+  padding: 0 0 2rpx 0;
+  font-size: 30rpx;
+  color: #e02e24;
+}
+
+.goodsNum {
+  display: block;
+  float: left;
+  width: 15%;
+  font-size: 25rpx;
+  margin-top: 100rpx;
+}
+
+.submitInf {
+  padding: 0 20rpx;
+}
+
+.submitInf view {
+  border-bottom: solid 1px #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.submitInf view text {
+  font-size: 28rpx;
+}
+
+.submitInf view text:first-child {
+  color: #666;
+}
+
+.submitInf view text:last-child {
+  color: #666;
+  float: right;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 90;
+  /* border-top: solid 1rpx #e0e3eb; */
+}
+
+.footer text {
+  float: left;
+  width: 73%;
+  font-size: 34rpx;
+  height: 90rpx;
+  color: #666;
+  line-height: 90rpx;
+}
+
+.footer text:nth-child(1) {
+  /* padding-left: 20rpx; */
+  padding-left: 2%;
+  font-size: 29rpx;
+  text-align: left;
+}
+
+.footer text:nth-child(2) {
+  color: white;
+  float: right;
+  text-align: center;
+  background: #e02e24;
+  width: 24%;
+  /* border-left: solid 1px #e0e3eb; */
+}
+
+.payAddress {
+  margin-left: 0;
+}
+
+.nameTe {
+  margin-left: 0;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  height: 75rpx;
+}

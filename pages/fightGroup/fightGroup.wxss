@@ -1,0 +1,152 @@
+/* pages/fightGroup/fightGroup.wxss */
+
+
+.groupView, .haveWinView {
+  height: 300rpx;
+  border-bottom: solid 1px #eee;
+}
+
+.leftView {
+  height: 220rpx;
+  width: 220rpx;
+  float: left;
+  margin-top: 40rpx;
+  position: relative;
+}
+
+.goodsImg {
+  display: block;
+  height: 220rpx;
+  width: 220rpx;
+}
+
+.poa {
+  position: absolute;
+  top: 0;
+  /* left:2.5%; */
+  height: 240rpx;
+  width: 240rpx;
+}
+
+.groupDesView {
+  float: right;
+  width: 450rpx;
+  font-size: 30rpx;
+  color: #666;
+  padding-right: 20rpx;
+}
+
+.textDes {
+  padding: 0 2%;
+   height: 80rpx; 
+   width: 100%;
+  /* line-height: 130rpx;  *//* background-color: rebeccapurple; */
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.time {
+  margin-top: 10rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+
+.time image {
+  display: block;
+  float: left;
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 8rpx;
+}
+
+.time text {
+  float: left;
+  padding-left: 10rpx;
+  padding-top: 5rpx;
+}
+
+.time text:last-child {
+  color: #e02e24;
+}
+
+.price text {
+  margin-right: 10rpx;
+}
+
+.price text:nth-child(1) {
+  color: #e02e24;
+  font-weight: bold;
+}
+
+.price text:nth-child(2) {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.groupDesView .fight {
+  display: block;
+  float: left;
+}
+
+.fightText {
+  display: block;
+  width: 100%;
+  font-size: 26rpx;
+  color: #999;
+  /* margin-top: 5rpx; */
+}
+
+.price {
+  float: left;
+  width: 250rpx;
+  margin-top: 45rpx;
+}
+
+.goFight {
+  display: block;
+  float: right;
+  margin-right: 20rpx;
+  height: 50rpx;
+  width: 110rpx;
+  background-color: #e02e24;
+  border: solid 1px #e02e24;
+  color: white;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+}
+
+.winMemery {
+  background-color: #fff;
+  color: #e02e24;
+}
+
+.footerView {
+  background: #eee;
+  color: #666;
+  text-align: center;
+  font-size: 27rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+/*我的订单  */
+.myorder {
+  background: url(https://m.meigo.com/activities/images/mini-programs/imgorder.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 110rpx;
+  height: 110rpx;
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+  z-index: 96;
+  
+}
+ @import "../haveWin/guessLike.wxss"; 

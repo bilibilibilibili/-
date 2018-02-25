@@ -1,0 +1,99 @@
+/* pages/myCenter/myCenter.wxss */
+.head {
+  background-color: #e02e24;
+  height: 348rpx;
+
+}
+
+.header-view {
+  width:192rpx;
+  height:192rpx;
+  border-radius: 96rpx;
+  background-color:#e65850;
+  margin-top: 42rpx;
+}
+.user-image {
+  width:168rpx;
+  height:168rpx;
+  border-radius: 84rpx;
+}
+.user-name {
+  padding-top: 30rpx;
+  color:white;
+  font-size:33.6;
+}
+.my-order {
+  height:108rpx;
+  background-color: white;
+}
+.right-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+.large-text {
+  font-size:36rpx;
+}
+.red-text{
+  color: #e65850;
+  margin-right: 20rpx;
+}
+
+.status-container{
+  height:156rpx;
+  background-color: white;
+  margin-top: 1rpx;
+  width: 100%;
+}
+
+.status-icon{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 24rpx;
+  position:relative;
+}
+.status-text{
+  font-size: 27.6rpx;
+  color:#333;
+  margin-top:24rpx;
+}
+.status-count{
+  background-color:#e65850;
+  color:white;
+  height:33.6rpx;
+  top:20rpx;
+  right: 5rpx;
+  min-width: 33.6rpx;
+  border-radius: 16.8rpx;
+  font-size:20.4rpx;
+  position:relative;
+}
+.status-count-padding{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.cell{
+  height:108rpx;
+  background-color: white;
+}
+.mg-m-t-20 {
+  margin-top: 24rpx;
+}
+.mg-m-t-1{
+  margin-top: 3rpx;
+}
+.cell-icon{
+  width: 48rpx;
+  height: 48rpx;
+}
+.cell-text{
+  font-size: 36rpx;
+  color: black;
+  padding-left: 36rpx;
+}
+
+.left {
+  left: 20rpx;
+}
+.hide {
+  display: none;
+}

@@ -1,0 +1,11 @@
+<view class="searchView">
+  <view>
+    <image src="http://img.tianxiahuo.cn/public/NetFile/20170715/d5a21638e138fa8f6b17fdb1fe4a49fb.png"></image>
+  </view>
+  <input class="searchBar searchBarInput" bindinput="bindKeyInput" placeholder="{{plcaeholder== undefined?'搜索':plcaeholder}}" maxlength="50" bindconfirm="btnSearchClick" bindfocus="clickSearchView" value="{{inputVal}}" focus="true"  />
+  <view wx:if="{{isInput}}" catchtap="delectInputText">
+    <image src="http://img.tianxiahuo.cn/public/NetFile/20170731/b372a7c9626daadd464ed5c4b0a31ead.png" class="delectImg"></image>
+
+  </view>
+  <button bindtap="btnSearchClick" hover-class="btnClick">搜索</button>
+</view>

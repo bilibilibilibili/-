@@ -1,0 +1,67 @@
+/* pages/special/special.wxss */
+.mg-small-mt {
+  margin-top: 5rpx
+}
+.mg-middle-mt {
+  margin-top: 27rpx
+}
+
+.font-size-20 {
+  font-size: 40rpx
+}
+mg-middle-pt {
+  padding-top: 30rpx;
+}
+.mg-middle-pb {
+  padding-bottom: 36rpx;
+}
+
+.bottom-container {
+  height: 72rpx;
+  margin-top: 12rpx;
+
+}
+.mg-bg-c-fff {
+  background-color: #fff
+}
+.goosdName-container {
+  padding-top: 12rpx;
+  font-size:33.6rpx;
+}
+.userImage1 {
+  width:60rpx;
+  height:60rpx;
+  z-index:100;
+  position:absolute;
+  border:1.2rpx solid #999;
+  border-radius:25px;
+}
+.userImage2{
+  width:60rpx;
+  height:60rpx; 
+  z-index:101;position:relative;
+  left: 40rpx ;
+  border:1.2rpx solid #999;
+  border-radius:30rpx;
+} 
+.cost{
+  color:#e02e24;
+  font-size:42rpx;
+}
+.des{
+  padding-left: 24px;
+  color:#999;
+  font-size:24rpx;
+}    
+.go-detail{
+  width:170rpx;
+  background-color: #e02e24;
+  color:white;
+  font-size:30rpx;
+  height: 72rpx;
+  border-radius: 10rpx;
+} 
+.right-icon {
+  width:36rpx;
+  height:36rpx;
+}                    

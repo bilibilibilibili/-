@@ -1,0 +1,62 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class='orderdet-top clearfix'>
+  <text>待付款</text>
+  <image src='{{imagurl}}'></image>
+</view>
+<view class='myAddress clearfix' bindtap="selectAddressDidClick">
+
+  <view class='imageViewA imageViewL'></view>
+  <view class="addressMessage payAddress">
+    <view class="name clearfix">
+      <text id='order-name'>{{defaultAddress.consigneeName}}{{defaultAddress.consigneeTel}}</text>
+      <text></text>
+    </view>
+    <!-- <view class="address"></view> -->
+    <view class="addressDetail" id='order-address'>送达地址:{{defaultAddress.province.regionName}}{{defaultAddress.city.regionName}}{{defaultAddress.district.regionName}}{{defaultAddress.address}}</view>
+  </view>
+</view>
+
+<view class='order-view clearfix'>
+
+  <view bindtap='orderItemDidClick' data-orderid='{{orderDetail.orderId}}'>
+    <!-- <view class='order-top clearfix'>
+        <text>订单编号:{{orderDetail.orderId}}</text>
+        <text>{{statusStr}}</text>
+      </view> -->
+    <view class='order-detail clearfix'>
+      <view class='leftView'>
+        <image src='{{orderDetail.goods[0].thumbnailPic}}' class='goodsImg'></image>
+      </view>
+      <view class='order-name clearfix'>
+        <text>{{orderDetail.goods[0].name}}</text>
+        <text>{{orderDetail.goods[0].spec}}</text>
+      </view>
+      <view class='order-price clearfix'>
+        <text>￥{{orderDetail.goods[0].singleP}}</text>
+        <text>X{{orderDetail.goods[0].quantity}}</text>
+      </view>
+    </view>
+    <view class='order-pay'>
+      <text>实付:￥{{orderPrice}}(免运费)</text>
+    </view>
+  </view>
+
+
+  <view class='{{optionAry.length == 1?"order-option clearfix" :"order-option options clearfix"}}' wx:if="{{optionAry.length}}">
+    <text wx:for="{{optionAry}}" wx:for-item="optionItem" wx:for-index="optionIndex" data-optionid='{{optionItem.optionId}}' bindtap='orderOptionDidClick' data-orderid='{{orderDetail.orderId}}' data-optiontext='{{optionItem.optionText}}'>{{optionItem.optionText}}</text>
+  </view>
+</view>
+<view class='orderDet-Infor clearfix'>
+  <view class='infor-order clearfix'>
+    <text>订单编号:{{orderDetail.orderId}}</text>
+    <text bindtap='clipboard' data-clipdata='{{orderDetail.orderId}}'>复制</text>
+  </view>
+  <view class='pay-view'>
+    <text class='pay-type'>支付方式:{{orderDetail.payment.name}}</text>
+    <text class='order-time'>下单时间:{{orderTime}}</text>
+  </view>
+
+</view>
+<view id="msg" hidden="{{hiddenMsg}}">
+  <text>{{msg}}</text>
+</view>

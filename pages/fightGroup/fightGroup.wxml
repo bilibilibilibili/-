@@ -1,0 +1,73 @@
+<view class='backgroundView'></view>
+<block wx:for="{{groupAry}}">
+  <view class='groupView' bindtap='goMyFightHaveWin' data-relativeid='{{item.relativeId}}' data-clickid='1'>
+    <view class='leftView'>
+      <image src='{{item.mainPic}}' class='goodsImg'></image>
+    </view>
+    <view class='groupDesView'>
+      <view class='time'>
+        <image src='https://m.meigo.com/activities/images/mini-programs/clock.png'></image>
+        <text>还剩</text>
+        <text>{{item.leftTime}}</text>
+      </view>
+      <text class='textDes'>{{item.title}}</text>
+      <text class='fightText'>{{item.groupNums}}人拼团</text>
+      <view class='price'>
+        <text>￥{{item.lowPrice}}</text>
+        <text style="text-decoration:line-through;">￥{{item.upPrice}}</text>
+
+      </view>
+      <text class='goFight'>去开团</text>
+      <!-- <text>距离还剩</text> -->
+    </view>
+  </view>
+</block>
+
+
+
+<block wx:for="{{haveWinAry}}">
+  <view class='haveWinView' wx:if="{{isLast && haveWinAry.length}}" bindtap='goMyFightHaveWin' data-relativeid='{{item.relativeId}}' data-clickid='2'>
+    <view class='leftView'>
+      <image src='{{item.mainPic}}' class='goodsImg'></image>
+      <image src="https://m.meigo.com/activities/images/mini-programs/over.png" class="poa"></image>
+    </view>
+    <view class='groupDesView'>
+      <view class='time'>
+        <image src='https://m.meigo.com/activities/images/mini-programs/clock.png'></image>
+        <text>开奖时间</text>
+        <text>{{item.haveWinTime}}</text>
+      </view>
+      <view class='textDes'>{{item.title}}</view>
+      <text class='fightText'>{{groupNums}}人拼团</text>
+      <view class='price'>
+        <text>￥{{item.lowPrice}}</text>
+        <text style="text-decoration:line-through;">￥{{item.upPrice}}</text>
+
+      </view>
+      <text class='goFight winMemery'>中奖名单</text>
+
+    </view>
+  </view>
+</block>
+
+ <import src="../haveWin/guessLike" />
+<template is="guesslike" data="{{guessLikeList}}" wx:if="{{ishavaLast && isLast && guessLikeList.length}}"></template>   
+<!-- <view class='commendView clear' wx:if="{{ishavaLast && isLast && guessLikeList.length}}">
+  <view class='myLikeTop'>猜你喜欢</view>
+  <view class='guessLickCell'  wx:for="{{guessLikeList}}">
+    <image src='{{item.data.goodsPic}}'></image>
+    <view class='likeInforView' bindtap='guessLikeCellDidCkick'  data-item='{{item}}'>
+      <text class='guessgoodsName'>{{item.data.pintuanName}}</text>
+      <view class='likePrice'>
+        <text>￥{{item.data.lowPrice}}</text>
+        <text>已拼{{item.data.salesNum}}件</text>
+      </view>
+    </view>
+
+  </view>
+<view class='footerView'>没有更多了</view>
+</view> -->
+
+<include src="../../utils/loading.wxml" />
+<view class="myorder" bindtap="goMyorderView"></view>
+  <view class='footerView' hidden="{{!isLast || !ishavaLast}}">没有更多</view>  

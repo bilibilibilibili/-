@@ -1,0 +1,74 @@
+<!--editAddress.wxml-->
+<!-- <view class="infoText">{{province}} {{city}} {{county}}</view>  -->
+<view class="editAddressView">
+  <view class="nameView">
+    <text>收货人姓名</text>
+    <input placeholder="点击输入收货人姓名" placeholder-style="color:#999" value="{{name}}" bindblur="inputName" />
+  </view>
+  <view class="contactView">
+    <text>联系电话</text>
+    <input placeholder="点击输入手机号" placeholder-style="color:#999" value="{{contact}}" bindblur="inputContact" type='number' />
+  </view>
+  <view class="provinceView" bindtap="translate">
+    <text>省/市/区</text>
+    <text id='{{address =="请选择"?"addressTypeeC":"addressTypee"}}'>{{address}}</text>
+  </view>
+  <view class="detailAddressView clerafix">
+    <text>详细地址</text>
+    <input placeholder="点击输入详细地址" placeholder-style="color:#999" value="{{detailAddress}}" bindblur="inputDetail" />
+  </view>
+  <view class="addressType" bindtap="addressTypeDidClick">
+    <text id='addressType'>地址类型</text>
+    <text id='{{typenameSure =="请选择"?"addressTypeeeeC":"addressTypeeee"}}'>{{typenameSure}}</text>
+  </view>
+  <view class="defaultAddressView">
+    <text id='defalut'>设为默认收货地址</text>
+    <switch type="switch" bindchange="changeAddressStatus" checked="{{isDefaultAddress == '1' ? true : false}}" />
+  </view>
+
+</view>
+
+<view class="saveAddress " bindtap="saveAddress">
+  保存</view>
+<include src="../../../utils/loading.wxml" />
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+  <view class="animation-element" catchtap="nono">
+    <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+    <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+    <view class="line"></view>
+
+    <picker-view indicator-style="height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+      <!--省-->
+      <picker-view-column>
+        <view wx:for="{{fightRrovinces}}" wx:for-item="sheng" wx:key="">
+          {{sheng.name}}
+        </view>
+      </picker-view-column>
+      <!--地级市-->
+      <picker-view-column>
+        <view wx:for="{{fightCitys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+      <!--区县-->
+      <picker-view-column>
+        <view wx:for="{{fightcountys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+<!--地址类型  -->
+<view class='showAddress' wx:if="{{showAddressType}}">
+  <text class='{{addressTypeid == 1? "addtyoe addidSelect":"addtyoe"}}' bindtap='addressTypeIdDidClick' data-addid='1' data-typename='家庭'>家庭</text>
+  <text class='{{addressTypeid == 2? "addtyoe addidSelect":"addtyoe"}}' bindtap='addressTypeIdDidClick' data-addid='2' data-typename='公司'>公司</text>
+  <view class="footer clear">
+    <text bindtap="addresTypeFooterClick" data-id="3">取消</text>
+    <text bindtap="addresTypeFooterClick" data-id="4">确定</text>
+  </view>
+</view>
+<view id="fixedBg" catchtap="closePopup" hidden="{{!showBg}}"></view>
+<view id="msg" hidden="{{hiddenMsg}}">
+  <text>{{msg}}</text>
+</view>

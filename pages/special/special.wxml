@@ -1,0 +1,32 @@
+<!--pages/special/special.wxml-->
+  <view class='main-container'>
+    <block wx:for='{{dataSource}}' wx:key="{{index}}">
+    <view class="{{index==0?topItemClass:itemClass}}" bindtap='goToDetail' data-item='{{item}}'>
+        <view class='mg-flex'>
+          <image src="{{item.data.mainPic}}" style='width: 100%' lazy-load="{{true}}" mode='widthFix'></image>
+        </view>
+        <view class='mg-content goosdName-container'>
+          <text>{{item.data.pintuanName}}</text>
+        </view>
+        <view class='mg-flex mg-flex-r mg-content mg-nowrap bottom-container'> 
+          <view class='mg-flex mg-flex-1 mg-flex-j-start mg-flex-a-center '>
+            <text class='cost'>￥{{item.data.lowPrice}}</text>
+            <text class='des'>已拼{{item.data.salesNum}}件</text>
+          </view>
+          <view class='mg-flex mg-flex-1 mg-flex-j-end mg-flex-a-center'>
+            <view class='mg-flex mg-flex-j-end mg-nowrap' style='padding-right:60rpx'>
+              <image class='mg-flex mg-flex-a-center userImage1' src='{{item.data.membersPic[0]}}'></image>
+              <image class='mg-flex mg-flex-a-center userImage2' src='{{item.data.membersPic[1]}}'></image>
+            </view>
+            <view class='mg-flex mg-flex-1 mg-flex-a-center mg-flex-j-center go-detail' data-item='{{item}}' catchtap='goToDetail'>
+            <text>去拼单</text>
+            <image src='https://m.meigo.com/activities/images/mini-programs/arrow/img_buttonarow.png' class='right-icon'></image>
+            </view>
+          </view>
+        </view>
+    </view>
+    </block>
+  </view>
+  
+
+

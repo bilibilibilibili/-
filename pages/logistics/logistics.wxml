@@ -1,0 +1,21 @@
+<!--pages/logistics/logistics.wxml-->
+<view class='logistics-top'>
+  <view class='leftView'>
+    <image src='{{logisticDict.goodsPic}}' class='goodsImg'></image>
+  </view>
+  <view class='logis-inform'>
+    <text>{{logisticDict.logiStatus}}</text>
+    <text>{{logisticDict.company}}{{logisticDict.billNo}}</text>
+    <text>官方电话</text>
+  </view>
+
+</view>
+<view class='list-view'>
+<view class='logistics-list' wx:for="{{logisticDict.history}}" wx:if="{{logisticDict.history.length}}">
+  <view class='itemlist clearfix'>
+    <text>{{item.time}}</text>
+    <image src='https://m.meigo.com/activities/images/mini-programs/sharesuccess.png'></image>
+    <text>{{item.desc}}</text>
+  </view>
+</view>
+</view>

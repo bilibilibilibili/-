@@ -1,0 +1,63 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='payMentView' wx:if="{{showPay}}">
+  <view class='myAddress clearfix' wx:if="{{haveAddress}}" bindtap="selectAddressDidClick">
+
+    <view class='imageViewA imageViewL'></view>
+    <view class="addressMessage payAddress">
+      <view class="name clearfix">
+        <text>姓名:{{defaultAddress.consigneeName}}</text>
+        <text>{{defaultAddress.addrType == 1?"家庭":"公司"}}</text>
+      </view>
+      <view class="address">联系电话:{{defaultAddress.consigneeTel}}</view>
+      <view class="addressDetail">送达地址:{{defaultAddress.province.regionName}}{{defaultAddress.city.regionName}}{{defaultAddress.district.regionName}}{{defaultAddress.address}}</view>
+    </view>
+    <view class='imageViewA'></view>
+
+  </view>
+  <view class='goodsInform'>
+    <view class='leftView'>
+      <image src='{{goodsInfor.thumbnailPic}}'></image>
+    </view>
+    <view class='goodsView'>
+      <text class='nameTe'>{{goodsInfor.name}}</text>
+      <text id='payprice'>￥{{price}}</text>
+    </view>
+    <text class='goodsNum'>数量:{{goodsInfor.quantity}}个</text>
+
+
+  </view>
+  <view class='submitInf'>
+    <view>
+      <text>商品价格:</text>
+      <text>￥{{price}}</text>
+    </view>
+    <view>
+      <text>运费:</text>
+      <text>￥{{total.totalTax}}</text>
+    </view>
+    <view>
+      <text>合计</text>
+      <text>￥{{totalPrice}}</text>
+    </view>
+  </view>
+  <view class="footer clear">
+    <text data-id="3">合计:￥{{totalPrice}}</text>
+    <text bindtap="WXPayDidClick" data-id="4">支付</text>
+  </view>
+</view>
+
+<!--展示登录弹框  -->
+<view class="loginView" wx:if="{{showLogin}}">
+  <text class='loginExplain'>为了保障账号安全,请绑定手机号</text>
+  <!-- <input type='number' class='myPhone'></input> -->
+  <view class='phone '>
+    <input placeholder='请输入手机号' placeholder-style="color:#999" type="number" data-id='1' bindinput="listenContentChange" maxlength='11' value='{{phone}}' focus='true'></input>
+  </view>
+  <view class='code '>
+    <input placeholder='请输入短信验证码' placeholder-style="color:#999" type="number" data-id='2' bindinput="listenContentChange" value='{{code}}'></input>
+    <text class="{{issend==true?'sending':''}}" bindtap="sendCode">{{sendOrder}}</text>
+  </view>
+  <text class='confrime' bindtap='loginConfrimDidClick'>确定</text>
+</view>
+<view id="fixedBg" catchtap="closePopup" wx:if="{{showBg}}"></view>
+<include src="../../utils/loading.wxml" />

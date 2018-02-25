@@ -1,0 +1,224 @@
+/* pages/wxuserShare/wxuserShare.wxss */
+@import "../share/share.wxss";
+@import "../goodsDetail/goodsDetail.wxss";
+page {
+  background: #eee
+}
+.sharePeople {
+  width: 100%;
+}
+.shareCenter {
+  width: 60%;
+  margin-left: 20%;
+}
+.fightNowView {
+  background: #fff
+}
+.groupView, .haveWinView {
+  height: 260rpx;
+  border-bottom: solid 1px #eee;
+}
+
+.leftView {
+  height: 220rpx;
+  width: 220rpx;
+  float: left;
+  /* margin-top: 40rpx; */
+  position: relative
+}
+
+.goodsImg {
+  display: block;
+  height: 220rpx;
+  width: 220rpx;
+  padding-top: 20rpx;
+}
+.poa {
+  position:absolute;top:0;
+  /* left:2.5%; */
+ height: 240rpx;
+  width: 240rpx; 
+}
+.groupDesView {
+  float: right;
+  width: 450rpx;
+  font-size: 30rpx;
+  color: #666;
+  padding-right: 20rpx;
+}
+.textDes {
+  padding: 10rpx 20rpx 0 10rpx;
+height: 80rpx;
+    /* line-height: 130rpx;  */
+    /* background-color: rebeccapurple; */
+display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    font-size: 28rpx;
+overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+}
+.listView text{
+display: block;
+width: 100%;
+font-size: 26rpx;
+color: #999;
+}
+.listView text:nth-child(2){
+  padding-top: 40rpx;
+}
+.listView text:nth-child(3){
+  font-size: 30rpx;
+  color: #e02e24
+}
+
+.sharrrr {
+  background: #fff;
+}
+.shareImgView {
+  
+  float: left;
+   border-radius: 30rpx; 
+  /* border:solid 2rpx #eee; */
+  position: relative;
+  /* border-radius: 50rpx; */
+  margin-left: 10rpx;
+}
+.shareCenterImgView {
+   float: left;
+   border-radius: 30rpx; 
+    position: relative;
+   margin-left: 20rpx;
+}
+.shareImgView image {
+  display: block;
+ width: 60rpx;
+  height: 60rpx;
+  /* border:solid 2rpx #eee; */
+  border-radius: 30rpx;
+
+  /* margin-left: 20rpx; */
+  margin-top: 30rpx;
+  float: left;
+}
+ /* .imageBorder {
+  border:solid 2rpx #eee;
+} */
+.idifity {
+  background: #e02e24;
+  position: absolute;
+  top: 10rpx;
+  left: 30rpx;
+  display: block;
+  height: 20rpx;
+  line-height: 20rpx;
+  width: 40rpx;
+  padding: 5rpx 10rpx;
+  color: white;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  text-align: center;
+}
+.leftNum ,.nowleftNum{
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+}
+.nowleftNum {
+  text-align: center;
+}
+
+.leftNum text,.nowleftNum text {
+  margin-top: 40rpx;
+  font-size: 35rpx;
+  text-align: center;
+}
+
+
+.leftNum text:nth-child(2),.nowleftNum text:nth-child(2) {
+  color: #e02e24;
+  font-weight: bold;
+  
+}
+.saveAddress {
+  color: white;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #e02e24;
+  width: 90%;
+  border-radius: 10rpx;
+  margin: 30rpx 5%;
+}
+ .usenewProduct{
+  margin-top: 20rpx;
+  border-top: solid 20rpx #eee;
+} 
+.usenewProduct,.overnewProductView {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #999;
+  font-size: 28rpx;
+  
+
+}
+.usenewProduct text,.overnewProductView text {
+  display: block;
+
+}
+.usenewProduct text:first-child, .overnewProductView text:first-child{
+  float: left;
+  width: 20%;
+  padding-left: 20rpx;
+  color: #333;
+
+}
+.overnewProductView text:first-child {
+  width: 40%;
+}
+.usenewProduct text:last-child,.overnewProductView text:last-child {
+   float: right;
+  width: 70%;
+  /* padding-right: 20rpx; */
+  color: #999;
+  font-size: 28rpx;
+}
+.overnewProductView text:last-child {
+width: 50%;
+text-align: right;
+margin-right: 20rpx
+}
+/*拼团成功  */
+
+.overShareTopTitleView {
+  width: 70%;
+  margin-left: 15%;
+  background: white url(https://m.meigo.com/activities/images/mini-programs/sharesuccess.png) no-repeat 30% center;
+  background-size: 50rpx;
+  text-align: center;
+  border-top: solid 30rpx #fff;
+  color: #10c438;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.fightInfor {
+  background: #fff
+}
+.fightRemid {
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding-top: 20rpx;
+}
+.failFinght {
+  text-align: center;
+  font-size: 29rpx;
+  color: #fb0c33;
+  height: 30rpx;
+  margin-top: 30rpx;
+}

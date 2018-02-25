@@ -1,0 +1,83 @@
+/* pages/haveWin/haveWin.wxss */
+page {
+  padding-bottom: 100rpx; 
+ /* height: 1000rpx; */
+}
+.goods {
+   /* margin-top: 20rpx;  */
+   height: 240rpx;
+   width: 100%;
+   margin-top: 20rpx;
+}
+.leftView {
+  width: 27%;
+  height: 240rpx;
+  float: left;
+}
+.leftView image {
+  display: block;
+  width: 96%;
+  padding-left: 4%;
+  height: 200rpx;
+  padding-top: 20rpx
+}
+.goodsDetail {
+  /* padding-top: 20rpx; */
+  width: 69%;
+  float: right;
+  padding-left: 10rpx;
+  padding-right: 20rpx;
+  height: 240rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+.goodsDetail text {
+  display: block;
+  width: 100%;
+  padding-top: 15rpx
+}
+.goodsDetail text.num{
+  color: #999;
+  font-size: 23rpx;
+}
+.goodsDetail text.price {
+  color: red;
+  font-size: 30rpx
+}
+/*中奖名单  */
+.winnerView {
+  border-top: solid 20rpx #eee;
+/* height: 70rpx; */
+
+/* margin-top: 240rpx; */
+}
+.topView text,.winnerDes text {
+  height: 70rpx;
+  padding: 20rpx 0;
+  width: 25%;
+  display: block;
+  float: left;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  border-bottom: solid 1rpx #eee;
+}
+.winnerDes text {
+  color: #333;
+}
+.winnerDes text:nth-child(1) {
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+overflow:hidden;
+}
+.topView text:last-child,.winnerDes text:last-child {
+  width: 50%
+}
+
+/*猜你喜欢  */
+/* @import "../haveWin/guessLike.wxss"; */

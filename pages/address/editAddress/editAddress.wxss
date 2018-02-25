@@ -1,0 +1,286 @@
+/* editAddress.wxss */
+
+page {
+  width: 100%;
+  background-color: #efefef;
+  padding-bottom: 150rpx;
+}
+
+.editAddressView {
+  background-color: #efefef;
+}
+
+.saveAddress {
+  color: white;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #e02e24;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10rpx;
+  margin-top: 70rpx;
+}
+.addressSaveBtn {
+  color: white;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #e02e24;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10rpx;
+  margin-top: 0;
+}
+.saveAddress button,addressSaveBtn button {
+  margin-top: 20rpx;
+  color: white;
+  margin-bottom: 40rpx;
+  margin-left: 35rpx;
+  width: 90%;
+  background-color: #e02e24;
+}
+
+.editAddressView>view {
+  /* padding:10rpx 0; */
+  height: 100rpx;
+}
+
+.editAddressView>view text {
+  color: #333;
+  height: 100rpx;
+  /* display: block; *//* width: 10%; */
+  padding-left: 20rpx;
+  line-height: 100rpx;
+  /* padding: 20rpx 20rpx 5rpx 20rpx; */
+  font-size: 30rpx;
+  float: left;
+  text-align: left;
+}
+
+.editAddressView>view input {
+  color: #333;
+  /* padding: 0 20rpx 5rpx 20rpx; */
+  padding: 25rpx 30rpx;
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: right;
+}
+
+.nameView {
+  background-color: white;
+  margin-top: 3rpx;
+}
+
+.contactView {
+  background-color: white;
+  margin-top: 3rpx;
+}
+
+.provinceView, .addressType {
+  background: white url(https://m.meigo.com/activities/images/mini-programs/arrow.png) no-repeat 97% center;
+  margin-top: 3rpx;
+  background-size: 18rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 25rpx;
+}
+
+.provinceView text:first-child, addressType text:first-child {
+  color: #333;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  /* padding-top: 20rpx; */
+}
+
+.provinceView text:last-child, .addressType text:last-child {
+  color: #666;
+  padding-right: 45rpx;
+  float: right;
+  font-size: 28rpx;
+  width: 60%;
+   word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+    white-space:nowrap; 
+    text-overflow:ellipsis; 
+    -o-text-overflow:ellipsis; 
+    overflow:hidden;
+    height: 100rpx;
+    text-align: right;
+}
+
+.detailAddressView {
+  background-color: white;
+  margin-top: 3rpx;
+}
+
+.defaultAddressView {
+  background-color: white;
+  margin-top: 3rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.defaultAddressView switch {
+  float: right;
+  margin-right: 20rpx;
+}
+
+.infoText {
+  margin-top: 20rpx;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+
+picker-view {
+  background-color: white;
+  padding: 0;
+  width: 100%;
+  height: 380rpx;
+  bottom: 0;
+  position: fixed;
+}
+
+picker-view-column view {
+  vertical-align: middle;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------- */
+
+.animation-element-wrapper {
+  display: flex;
+  position: fixed;
+  left: 0;
+  /* height: 400rpx; */
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  /* bottom: 0; */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.animation-element {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 470rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.animation-button {
+  margin-top: 20rpx;
+  top: 20rpx;
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  align-items: center;
+}
+
+.left-bt, .right-bt {
+  color: #999;
+  display: inline-flex;
+  position: fixed;
+  margin-top: 20rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left-bt {
+  left: 30rpx;
+}
+
+.right-bt {
+  right: 30rpx;
+}
+
+.line {
+  display: block;
+  position: fixed;
+  height: 1rpx;
+  width: 100%;
+  margin-top: 89rpx;
+  background-color: #eee;
+}
+
+.showAddress {
+  position: fixed;
+  top: 50%;
+  width: 600rpx;
+  left: 50%;
+  margin-left: -300rpx;
+  height: 410rpx;
+  margin-top: -205rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  z-index: 100;
+}
+
+.addtyoe {
+  padding-top: 30rpx;
+  margin: 0 50rpx;
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: solid 1px #eee;
+  color: #333;
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.addidSelect {
+  color: #e02e24;
+}
+
+.footer {
+  margin-top: 100rpx;
+}
+
+.footer text {
+  border-top: solid 1px #e0e3eb;
+  float: left;
+  width: 49.5%;
+  font-size: 34rpx;
+  height: 88rpx;
+  color: #666;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+.footer text:nth-child(2) {
+  color: #e02e24;
+  border-left: solid 1px #e0e3eb;
+}
+
+.addressType {
+  font-size: 30rpx;
+}
+
+.defaultAddressView >view text, .addressType >view text {
+  font-size: 30rpx;
+}
+
+#addressType, #defalut, #addressTypee, #addressTypeeee {
+  color: #333;
+  font-size: 30rpx;
+}
+
+#addressTypeeC, #addressTypeeeeC {
+  color: #999;
+}
+

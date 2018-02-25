@@ -1,0 +1,4 @@
+<!--pages/order/order.wxml-->
+<!-- <text>pages/order/order.wxml</text> -->
+<!--http://m.meigooo.com/member/groups.html  -->
+<web-view src="{{url}}"></web-view>

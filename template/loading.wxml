@@ -1,0 +1,7 @@
+
+<template name="loading">
+  <view class='loading'>
+      <image class='loading-image' mode='widthFix' src="https://m.meigo.com/activities/images/mini-programs/loading.gif"></image>
+  </view>
+</template>
+
